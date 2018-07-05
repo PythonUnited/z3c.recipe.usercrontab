@@ -27,8 +27,7 @@ class UserCrontab:
         readcrontab = self.options.get('readcrontab', None)
         writecrontab = self.options.get('writecrontab', None)
 
-        self.options['identifier'] = '%s [%s]' % (
-            buildout['buildout']['directory'], name)
+        self.options['identifier'] = '[%s]' % name
         self.crontab = UserCrontabManager(
             readcrontab, writecrontab,
             identifier=self.options['identifier'])
